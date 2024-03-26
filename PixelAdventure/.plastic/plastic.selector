@@ -1,0 +1,4 @@
+repository "PixelAdventure@jniors75@cloud"
+  path "/"
+    br "/main"
+    co "/main"
