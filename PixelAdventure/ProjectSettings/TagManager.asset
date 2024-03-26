@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Wall
-  - Apple
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -13,8 +11,8 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Wall
-  - Fruit
+  - 
+  - 
   - 
   - 
   - 
