@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool inGround;
     [SerializeField] private LayerMask ground;
     [SerializeField] private Transform foot;
+    [SerializeField] private bool hit;
+    public bool _hit {get { return hit; }}
     #endregion
 
     #region Player Movimentação
@@ -108,13 +110,13 @@ public class PlayerController : MonoBehaviour
         if (playerInputs.Jump()) inputJump = true;
         if (playerInputs.Dash() && enableDash) inputDash = true;
 
-        if(Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(0);
+        if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(0);
     }
     private void Movement()
     {
         player.velocity = move;
         isMoving = player.velocity.x != 0;
-        if (!inWall) Flip();
+        if (!inWall && !hit) Flip();
     }
     private void Flip()
     {
@@ -145,7 +147,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 nJump = 2;
-                StartCoroutine(StopInput());
+                StartCoroutine(StopInput(timerWallJump));
                 player.velocity = Vector2.zero;
                 player.AddForce(-transform.right * wallJumpForce + transform.up * wallJumpForce * 1.5f, ForceMode2D.Impulse);
                 transform.eulerAngles += Vector3.up * 180;
@@ -166,6 +168,15 @@ public class PlayerController : MonoBehaviour
         player.velocity = Vector2.zero;
         StartCoroutine(StopInputs());
         player.AddForce(dir * jumpForce, ForceMode2D.Impulse);
+    }
+
+    public void Hit(float jumpForce, Vector2 dir)
+    {
+        player.velocity = Vector2.zero;
+        hit = true;
+        StartCoroutine(StopInputs());
+        player.AddForce(dir * jumpForce, ForceMode2D.Impulse);
+        StartCoroutine(StopInput(0.25f));
     }
 
     IEnumerator StopInputs()
@@ -226,10 +237,11 @@ public class PlayerController : MonoBehaviour
             player.velocity = new Vector2(player.velocity.x, wallSlidingSpeed);
         }
     }
-    IEnumerator StopInput()
+    IEnumerator StopInput(float time)
     {
         inControl = false;
-        yield return new WaitForSeconds(timerWallJump);
+        yield return new WaitForSeconds(time);
         inControl = true;
+        hit = false;
     }
 }
