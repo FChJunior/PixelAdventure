@@ -19,14 +19,20 @@ public class Fire : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Vector2 dir;
+            Vector2 dir = Vector2.zero;
             if(transform.position.x > other.transform.position.x)
-                dir = new Vector2(-0.5f,1);
+                dir.x = -0.5f;
             else if(transform.position.x < other.transform.position.x)
-                dir = new Vector2(0.5f,1);
+                dir.x = 0.5f;
             else
-                dir = new Vector2(0,1);
-            other.GetComponent<PlayerController>().Hit(150, new Vector2(dir.normalized.x * 3, dir.normalized.y));
+                dir.x = 0f;
+
+            if(transform.position.y > other.transform.position.y)
+                dir.y = -0.5f;
+            else if(transform.position.y <= other.transform.position.y)
+                dir.y = 1f;
+
+            other.gameObject.GetComponent<PlayerController>().Hit(200, dir);
         }
     }
 

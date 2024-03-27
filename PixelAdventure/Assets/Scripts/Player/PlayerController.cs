@@ -174,7 +174,6 @@ public class PlayerController : MonoBehaviour
     {
         player.velocity = Vector2.zero;
         hit = true;
-        StartCoroutine(StopInputs());
         player.AddForce(dir * jumpForce, ForceMode2D.Impulse);
         StartCoroutine(StopInput(0.25f));
     }
