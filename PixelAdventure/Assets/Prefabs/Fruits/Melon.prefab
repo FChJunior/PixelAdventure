@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2136034765208599122}
   - component: {fileID: 7368341338928752848}
   - component: {fileID: 2518089541728978238}
+  - component: {fileID: -8778505709111814858}
   m_Layer: 0
   m_Name: Melon
   m_TagString: Untagged
@@ -92,7 +93,7 @@ CapsuleCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.005246909, y: 0.0052472204}
   m_Size: {x: 0.5382164, y: 0.38079283}
@@ -110,6 +111,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  col2D: {fileID: 0}
+  fruit: {fileID: 0}
+--- !u!250 &-8778505709111814858
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940113064992859255}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceMagnitude: 10
+  m_ForceVariation: 0
+  m_DistanceScale: 1
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 0
+  m_Drag: 0
+  m_AngularDrag: 0
 --- !u!1 &3283577545139964715
 GameObject:
   m_ObjectHideFlags: 0

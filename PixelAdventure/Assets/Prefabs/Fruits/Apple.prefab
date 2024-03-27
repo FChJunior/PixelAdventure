@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 1811704011671658832}
   - component: {fileID: 6360509750924602650}
   - component: {fileID: 8963173771631211955}
+  - component: {fileID: 2695570346476949475}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Apple
@@ -198,7 +199,7 @@ CircleCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -216,4 +217,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 150431281878633547}
-  typeFruit: Apple
+  col2D: {fileID: 0}
+  fruit: {fileID: 0}
+--- !u!250 &2695570346476949475
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8990316241500679052}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceMagnitude: 10
+  m_ForceVariation: 0
+  m_DistanceScale: 1
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 0
+  m_Drag: 0
+  m_AngularDrag: 0

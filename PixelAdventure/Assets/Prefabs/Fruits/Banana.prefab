@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 6060174613313581113}
   - component: {fileID: 6717514444454404361}
   - component: {fileID: 6870713311462816304}
+  - component: {fileID: -2040365557840770497}
   m_Layer: 0
   m_Name: Banana
   m_TagString: Untagged
@@ -198,7 +199,7 @@ CircleCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -216,4 +217,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  typeFruit: Banana
+  col2D: {fileID: 0}
+  fruit: {fileID: 0}
+--- !u!250 &-2040365557840770497
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8731041711863637655}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceMagnitude: 10
+  m_ForceVariation: 0
+  m_DistanceScale: 1
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 0
+  m_Drag: 0
+  m_AngularDrag: 0

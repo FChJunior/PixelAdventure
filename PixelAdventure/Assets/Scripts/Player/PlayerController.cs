@@ -1,6 +1,6 @@
 using System.Collections;
-using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -106,6 +106,8 @@ public class PlayerController : MonoBehaviour
 
         if (playerInputs.Jump()) inputJump = true;
         if (playerInputs.Dash() && enableDash) inputDash = true;
+
+        if(Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(0);
     }
     private void Movement()
     {
@@ -151,6 +153,12 @@ public class PlayerController : MonoBehaviour
             inputJump = false;
         }
         CheckGround();
+    }
+    public void Jumping()
+    {
+        nJump = 1;
+        player.velocity = Vector2.zero;
+        player.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
     private void CheckGround()
     {
