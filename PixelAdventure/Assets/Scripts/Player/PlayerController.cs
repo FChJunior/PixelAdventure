@@ -84,6 +84,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Inputs();
+        CheckGround();
     }
     private void FixedUpdate()
     {
@@ -152,7 +153,6 @@ public class PlayerController : MonoBehaviour
 
             inputJump = false;
         }
-        CheckGround();
     }
     public void Jumping(float jumpForce)
     {
@@ -160,11 +160,29 @@ public class PlayerController : MonoBehaviour
         player.velocity = Vector2.zero;
         player.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
+    public void Jumping(float jumpForce, Vector2 dir)
+    {
+        nJump = 1;
+        player.velocity = Vector2.zero;
+        StartCoroutine(StopInputs());
+        player.AddForce(dir * jumpForce, ForceMode2D.Impulse);
+    }
+
+    IEnumerator StopInputs()
+    {
+        float g = player.gravityScale;
+        player.gravityScale = 0f;
+        inControl = false;
+        yield return new WaitForSeconds(timerWallJump);
+        inControl = true;
+        player.gravityScale = g;
+    }
+
     private void CheckGround()
     {
         inGround = Physics2D.OverlapCircle(foot.position, 0.1f, ground);
-        isFall = player.velocity.y < 0;
-        isRising = player.velocity.y > 0;
+        isFall = player.velocity.y < 0 && !inGround;
+        isRising = player.velocity.y > 0 && !inGround;
         if (inGround && !isRising && !isFall)
         {
             isJumping = false;
