@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 6257092019510962515}
   - component: {fileID: 4266363119283040834}
   m_Layer: 0
-  m_Name: Skin
+  m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3597040959476582128}
   - component: {fileID: 747530316121094918}
   - component: {fileID: 173934559702143193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Strawberry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 7825070350098438957}
   - component: {fileID: 8322434188792687554}
   m_Layer: 0
-  m_Name: Skin
+  m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

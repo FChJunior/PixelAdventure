@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
         }
         CheckGround();
     }
-    public void Jumping()
+    public void Jumping(float jumpForce)
     {
         nJump = 1;
         player.velocity = Vector2.zero;

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7368341338928752848}
   - component: {fileID: 2518089541728978238}
   - component: {fileID: -8778505709111814858}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Melon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 648118540591909703}
   - component: {fileID: 8703957818548962139}
   m_Layer: 0
-  m_Name: Skin
+  m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

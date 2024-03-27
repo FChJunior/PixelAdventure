@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9033980273662971225}
   - component: {fileID: 2258305374079044569}
   - component: {fileID: -8758985897156908350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Kiwi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 3814822103935144482}
   - component: {fileID: 2872117326729976668}
   m_Layer: 0
-  m_Name: Skin
+  m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

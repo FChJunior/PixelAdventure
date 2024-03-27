@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using System.Collections;
 
 public class Box : MonoBehaviour
@@ -52,8 +51,18 @@ public class Box : MonoBehaviour
     }
     IEnumerator Disable()
     {
-        yield return new WaitForSeconds(0.5f);
-        gameObject.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        breaks[boxType].SetActive(false);
+
+        float time = 0.1f;
+        for (int i = 0; i < 10; i++)
+        {
+            yield return new WaitForSeconds(time);
+            breaks[boxType].SetActive(true);
+            yield return new WaitForSeconds(time);
+            breaks[boxType].SetActive(false);
+            time -= 0.01f;
+        }
     }
     GameObject SortearItem()
     {
@@ -88,10 +97,10 @@ public class Box : MonoBehaviour
     {
         if (collision2D.gameObject.tag == "Player")
         {
-            if (collision2D.transform.position.y - 0.8f > transform.position.y)
+            if (collision2D.transform.position.y - 0.8f > transform.position.y && collision2D.gameObject.GetComponent<PlayerController>()._isJumpig)
             {
                 anim.SetTrigger("Hit");
-                collision2D.gameObject.GetComponent<PlayerController>().Jumping();
+                collision2D.gameObject.GetComponent<PlayerController>().Jumping(250f);
                 life--;
             }
             else if (collision2D.transform.position.y < transform.position.y)

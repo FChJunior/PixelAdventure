@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9087990739648645275}
   - component: {fileID: 7396060726390968485}
   m_Layer: 0
-  m_Name: Skin
+  m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 6717514444454404361}
   - component: {fileID: 6870713311462816304}
   - component: {fileID: -2040365557840770497}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Banana
   m_TagString: Untagged
   m_Icon: {fileID: 0}

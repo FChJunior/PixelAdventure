@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4254886876239216755}
   - component: {fileID: 150431281878633547}
   m_Layer: 0
-  m_Name: Skin
+  m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,9 +119,9 @@ GameObject:
   - component: {fileID: 6360509750924602650}
   - component: {fileID: 8963173771631211955}
   - component: {fileID: 2695570346476949475}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple
-  m_TagString: Apple
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

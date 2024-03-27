@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8265355211077681075}
   - component: {fileID: 3596377474111771043}
   - component: {fileID: -2105592390758804121}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pineapple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 773345369314361595}
   - component: {fileID: 2149323225937109527}
   m_Layer: 0
-  m_Name: Skin
+  m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
