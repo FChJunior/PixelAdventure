@@ -45,8 +45,8 @@ public class Box : MonoBehaviour
             }
             life--;
             spriteRenderer.enabled = false;
-            col2D.enabled = false;
             StartCoroutine(Disable());
+            col2D.enabled = false;
         }
     }
     IEnumerator Disable()
@@ -100,12 +100,13 @@ public class Box : MonoBehaviour
             if (collision2D.transform.position.y - 0.8f > transform.position.y && collision2D.gameObject.GetComponent<PlayerController>()._isJumpig)
             {
                 anim.SetTrigger("Hit");
-                collision2D.gameObject.GetComponent<PlayerController>().Jumping(250f);
+                collision2D.gameObject.GetComponent<PlayerController>().Jumping(250f, Vector2.up);
                 life--;
             }
             else if (collision2D.transform.position.y < transform.position.y)
             {
                 anim.SetTrigger("Hit");
+                collision2D.gameObject.GetComponent<PlayerController>().Jumping(50f, Vector2.down);
                 life--;
             }
         }

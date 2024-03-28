@@ -32,7 +32,7 @@ public class Arrow : MonoBehaviour
         if (other.tag == "Player")
         {
             anim.SetBool("Hit", true);
-            other.gameObject.GetComponent<PlayerController>().Jumping(400, dirJump[direction]);
+            other.gameObject.GetComponent<PlayerController>().Jumping(280, dirJump[direction]);
             col2D.enabled = false;
             StartCoroutine(Disable());
         }

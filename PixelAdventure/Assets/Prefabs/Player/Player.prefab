@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 5399809680378921717}
   - component: {fileID: 63417733422329110}
   - component: {fileID: 60429784896129688}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -302,6 +302,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   foot: {fileID: 187144999341406021}
+  hit: 0
   player: {fileID: 0}
   move: {x: 0, y: 0}
   speed: 5

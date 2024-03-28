@@ -43,10 +43,11 @@ public class FallingPlatform : MonoBehaviour
         anim.SetBool("On", true);
         anchor.bodyType = RigidbodyType2D.Static;
         particles.Play();
+        col2D.enabled = true;
         returnig = true;
 
-        yield return new WaitForSeconds(1f);
-        col2D.enabled = true;
+        yield return new WaitForSeconds(2f);
+        
         trigger.enabled = true;
         returnig = false;
 

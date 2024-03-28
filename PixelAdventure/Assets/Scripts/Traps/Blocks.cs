@@ -14,15 +14,16 @@ public class Blocks : MonoBehaviour
         GameObject player = collision2D.gameObject;
         if (player.tag == "Player")
         {
-            if (collision2D.transform.position.y - 0.4f > transform.position.y && player.GetComponent<PlayerController>()._isJumpig)
+            if (collision2D.transform.position.y - 0.4f > transform.position.y)
             {
                 anim.SetTrigger("Hit");
-                collision2D.gameObject.GetComponent<PlayerController>().Jumping(250f);
+                collision2D.gameObject.GetComponent<PlayerController>().Jumping(300f);
                 StartCoroutine(Disable());
             }
             else if (collision2D.transform.position.y < transform.position.y)
             {
                 anim.SetTrigger("Hit");
+                collision2D.gameObject.GetComponent<PlayerController>().Jumping(50f, Vector2.down);
                 StartCoroutine(Disable());
             }
         }

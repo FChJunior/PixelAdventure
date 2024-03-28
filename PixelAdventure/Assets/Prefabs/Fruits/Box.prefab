@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8623358992480710664}
   - component: {fileID: 568534893503836847}
   - component: {fileID: 2600284641786924640}
+  - component: {fileID: 6352564918848462094}
   m_Layer: 0
   m_Name: Break2
   m_TagString: Untagged
@@ -129,7 +130,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -179,6 +180,20 @@ PointEffector2D:
   m_ForceMode: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &6352564918848462094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515482279470162756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11cf7aed3e700f449c287d24ff7c325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2D: {fileID: 568534893503836847}
+  pointEffector2D: {fileID: 2600284641786924640}
 --- !u!1 &1052444181463510131
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +207,7 @@ GameObject:
   - component: {fileID: 8726897188657422764}
   - component: {fileID: 6580415000174054772}
   - component: {fileID: 1789237020705979808}
+  - component: {fileID: 3022557930716773501}
   m_Layer: 0
   m_Name: Break4
   m_TagString: Untagged
@@ -308,7 +324,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -358,6 +374,20 @@ PointEffector2D:
   m_ForceMode: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &3022557930716773501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052444181463510131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11cf7aed3e700f449c287d24ff7c325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2D: {fileID: 568534893503836847}
+  pointEffector2D: {fileID: 2600284641786924640}
 --- !u!1 &1194264561740503462
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +401,7 @@ GameObject:
   - component: {fileID: 8047106150188612761}
   - component: {fileID: 1264238978239928321}
   - component: {fileID: 1051844633892125921}
+  - component: {fileID: 3418314092014706751}
   m_Layer: 0
   m_Name: Break3
   m_TagString: Untagged
@@ -487,7 +518,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -537,6 +568,20 @@ PointEffector2D:
   m_ForceMode: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &3418314092014706751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194264561740503462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11cf7aed3e700f449c287d24ff7c325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2D: {fileID: 568534893503836847}
+  pointEffector2D: {fileID: 2600284641786924640}
 --- !u!1 &1299011902403796199
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +704,7 @@ GameObject:
   - component: {fileID: 4992895917426058232}
   - component: {fileID: 9199852781062745289}
   - component: {fileID: 2187853090729034395}
+  - component: {fileID: 1568737034339046366}
   m_Layer: 0
   m_Name: Break4
   m_TagString: Untagged
@@ -775,7 +821,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -825,6 +871,20 @@ PointEffector2D:
   m_ForceMode: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &1568737034339046366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004504884875037234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11cf7aed3e700f449c287d24ff7c325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2D: {fileID: 568534893503836847}
+  pointEffector2D: {fileID: 2600284641786924640}
 --- !u!1 &2429534705370645905
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +898,7 @@ GameObject:
   - component: {fileID: 4294542036334235873}
   - component: {fileID: 8575014916916398537}
   - component: {fileID: 228399538211983607}
+  - component: {fileID: 8720165201538459575}
   m_Layer: 0
   m_Name: Break3
   m_TagString: Untagged
@@ -954,7 +1015,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1004,6 +1065,20 @@ PointEffector2D:
   m_ForceMode: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &8720165201538459575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2429534705370645905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11cf7aed3e700f449c287d24ff7c325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2D: {fileID: 568534893503836847}
+  pointEffector2D: {fileID: 2600284641786924640}
 --- !u!1 &4346816212813163015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,6 +1092,7 @@ GameObject:
   - component: {fileID: 3993931825112791027}
   - component: {fileID: 4818880699935006144}
   - component: {fileID: 6048980971627556743}
+  - component: {fileID: 3525220072540601814}
   m_Layer: 0
   m_Name: Break1
   m_TagString: Untagged
@@ -1133,7 +1209,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1183,6 +1259,20 @@ PointEffector2D:
   m_ForceMode: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &3525220072540601814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4346816212813163015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11cf7aed3e700f449c287d24ff7c325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2D: {fileID: 4818880699935006144}
+  pointEffector2D: {fileID: 6048980971627556743}
 --- !u!1 &5237164101244449352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1286,7 @@ GameObject:
   - component: {fileID: 2738901537749428456}
   - component: {fileID: 7080792230228667197}
   - component: {fileID: 4130798969274802220}
+  - component: {fileID: 8926070108557746302}
   m_Layer: 0
   m_Name: Break2
   m_TagString: Untagged
@@ -1312,7 +1403,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1362,6 +1453,20 @@ PointEffector2D:
   m_ForceMode: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &8926070108557746302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5237164101244449352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11cf7aed3e700f449c287d24ff7c325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2D: {fileID: 568534893503836847}
+  pointEffector2D: {fileID: 2600284641786924640}
 --- !u!1 &5305169866993555004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,6 +1515,7 @@ GameObject:
   - component: {fileID: 1311861855640014756}
   - component: {fileID: 4948626558435425257}
   - component: {fileID: 8810139116684293594}
+  - component: {fileID: 8829727733785458329}
   m_Layer: 0
   m_Name: Break3
   m_TagString: Untagged
@@ -1526,7 +1632,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1576,6 +1682,20 @@ PointEffector2D:
   m_ForceMode: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &8829727733785458329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5574422341747929115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11cf7aed3e700f449c287d24ff7c325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2D: {fileID: 568534893503836847}
+  pointEffector2D: {fileID: 2600284641786924640}
 --- !u!1 &5801968982808090945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,6 +1709,7 @@ GameObject:
   - component: {fileID: 7163293544981068969}
   - component: {fileID: 1983389384163892563}
   - component: {fileID: 4940998611619601536}
+  - component: {fileID: 1860716990956549649}
   m_Layer: 0
   m_Name: Break2
   m_TagString: Untagged
@@ -1705,7 +1826,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1755,6 +1876,20 @@ PointEffector2D:
   m_ForceMode: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &1860716990956549649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5801968982808090945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11cf7aed3e700f449c287d24ff7c325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2D: {fileID: 568534893503836847}
+  pointEffector2D: {fileID: 2600284641786924640}
 --- !u!1 &6753914423623241661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,6 +1903,7 @@ GameObject:
   - component: {fileID: 8504168606856354558}
   - component: {fileID: 3475188865263190001}
   - component: {fileID: 49543063637400997}
+  - component: {fileID: 2789584129453346050}
   m_Layer: 0
   m_Name: Break1
   m_TagString: Untagged
@@ -1884,7 +2020,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1934,6 +2070,20 @@ PointEffector2D:
   m_ForceMode: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &2789584129453346050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6753914423623241661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11cf7aed3e700f449c287d24ff7c325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2D: {fileID: 568534893503836847}
+  pointEffector2D: {fileID: 2600284641786924640}
 --- !u!1 &7096324608815984615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,6 +2097,7 @@ GameObject:
   - component: {fileID: 592482992574110601}
   - component: {fileID: 6646348636636196706}
   - component: {fileID: 5443930601440476066}
+  - component: {fileID: 6632646903908877969}
   m_Layer: 0
   m_Name: Break1
   m_TagString: Untagged
@@ -2063,7 +2214,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -2113,6 +2264,20 @@ PointEffector2D:
   m_ForceMode: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &6632646903908877969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7096324608815984615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11cf7aed3e700f449c287d24ff7c325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2D: {fileID: 568534893503836847}
+  pointEffector2D: {fileID: 2600284641786924640}
 --- !u!1 &7268559413361171199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,6 +2361,7 @@ GameObject:
   - component: {fileID: 5350536464407498488}
   - component: {fileID: 7932705439199109830}
   - component: {fileID: 2174359366062379553}
+  - component: {fileID: 4957998531739210578}
   m_Layer: 0
   m_Name: Break4
   m_TagString: Untagged
@@ -2312,7 +2478,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -2362,6 +2528,20 @@ PointEffector2D:
   m_ForceMode: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &4957998531739210578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7538573075624368327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11cf7aed3e700f449c287d24ff7c325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2D: {fileID: 568534893503836847}
+  pointEffector2D: {fileID: 2600284641786924640}
 --- !u!1 &7966246720503873223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,12 +2551,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7498333328648795021}
-  - component: {fileID: 4449859501016806426}
   - component: {fileID: 6480547043255291544}
   - component: {fileID: 8834321796895656883}
   m_Layer: 3
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Break
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2397,26 +2576,6 @@ Transform:
   - {fileID: 7918287060729536380}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!250 &4449859501016806426
-PointEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7966246720503873223}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceMagnitude: 104.3
-  m_ForceVariation: 0
-  m_DistanceScale: 5.83
-  m_ForceSource: 0
-  m_ForceTarget: 0
-  m_ForceMode: 0
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!61 &6480547043255291544
 BoxCollider2D:
   m_ObjectHideFlags: 0
