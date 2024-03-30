@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask ground;
     [SerializeField] private Transform foot;
     [SerializeField] private bool hit;
-    public bool _hit {get { return hit; }}
+    public bool _hit { get { return hit; } }
     #endregion
 
     #region Player Movimentação
@@ -192,8 +192,8 @@ public class PlayerController : MonoBehaviour
 
     private void CheckGround()
     {
-        inGround = Physics2D.OverlapCircle(foot.position, 0.1f, ground);
-        isFall = player.velocity.y < 0;
+        inGround = Physics2D.OverlapCircle(foot.position, 0.2f, ground);
+        isFall = player.velocity.y < 0 && !inGround;
         isRising = player.velocity.y > 0 && !inGround;
         if (inGround && !isRising && !isFall)
         {
