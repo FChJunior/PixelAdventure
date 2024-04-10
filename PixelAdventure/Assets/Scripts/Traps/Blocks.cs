@@ -17,17 +17,21 @@ public class Blocks : MonoBehaviour
             if (collision2D.transform.position.y - 0.4f > transform.position.y)
             {
                 anim.SetTrigger("Hit");
-                collision2D.gameObject.GetComponent<PlayerController>().Jumping(300f);
+                collision2D.gameObject.GetComponent<PlayerController>().Jumping(250f);
                 StartCoroutine(Disable());
             }
             else if (collision2D.transform.position.y < transform.position.y)
             {
-                anim.SetTrigger("Hit");
-                collision2D.gameObject.GetComponent<PlayerController>().Jumping(50f, Vector2.down);
-                StartCoroutine(Disable());
+
             }
         }
 
+    }
+    public void Hit(PlayerController player, float dir)
+    {
+        anim.SetTrigger("Hit");
+        player.GetComponent<PlayerController>().Jumping(250f, Vector2.down);
+        StartCoroutine(Disable());
     }
 
     IEnumerator Disable()

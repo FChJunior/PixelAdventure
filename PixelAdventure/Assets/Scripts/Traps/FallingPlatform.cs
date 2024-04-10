@@ -5,7 +5,7 @@ public class FallingPlatform : MonoBehaviour
 {
     [Header("Falling Platform")]
     [SerializeField] private Rigidbody2D anchor;
-    [SerializeField] private Collider2D col2D, trigger;
+    [SerializeField] private Collider2D col2D;
     [SerializeField] private Animator anim;
     [SerializeField] private ParticleSystem particles;
     [SerializeField] private Transform anchorTrans, target;
@@ -19,13 +19,10 @@ public class FallingPlatform : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, target.position, 0.1f);
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
 
-            StartCoroutine(Disable());
-        }
+    public void Hit()
+    {
+        StartCoroutine(Disable());
     }
 
     IEnumerator Disable()
@@ -36,7 +33,6 @@ public class FallingPlatform : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         col2D.enabled = false;
-        trigger.enabled = false;
         anchor.bodyType = RigidbodyType2D.Dynamic;
 
         yield return new WaitForSeconds(2f);
@@ -48,11 +44,7 @@ public class FallingPlatform : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         
-        trigger.enabled = true;
         returnig = false;
-
-
-
     }
 
 

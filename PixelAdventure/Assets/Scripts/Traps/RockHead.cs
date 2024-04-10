@@ -29,8 +29,7 @@ public class RockHead : MonoBehaviour
         if (isMoving)
         {
             transform.Translate(direction[dir] * speed * Time.deltaTime);
-            // rig.AddForce(direction[dir] * speed, ForceMode2D.Force);
-            // //rig.velocity = direction[dir] * speed;
+            //rig.AddForce(direction[dir] * speed, ForceMode2D.Force);
         }
         if (Physics2D.Raycast(transform.position, direction[dir], distance, ground))
         {
@@ -60,7 +59,7 @@ public class RockHead : MonoBehaviour
                 hit = false;
         }
 
-        if (player != null && Physics2D.Raycast(transform.position, direction[dir], distance * 2, ground))
+        if (player != null && Physics2D.Raycast(transform.position, direction[dir], distance * 1.5f, ground))
         {
             if (hit) player.GetComponent<PlayerController>().Hit(200, direction[dir]);
         }
@@ -98,7 +97,7 @@ public class RockHead : MonoBehaviour
 
     IEnumerator Delay()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         isMoving = true;
     }
 
@@ -121,22 +120,5 @@ public class RockHead : MonoBehaviour
 
         }
     }
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            player = other.gameObject;
-            other.gameObject.transform.parent = transform;
-        }
-    }
 
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            player = null;
-            hit = false;
-            other.gameObject.transform.parent = null;
-        }
-    }
 }

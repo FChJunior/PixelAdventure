@@ -7,8 +7,6 @@ public class Fruits : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private Collider2D col2D;
     [SerializeField] private Rigidbody2D fruit;
-    // [SerializeField] private string typeFruit;
-    // public string _typeFruit { get { return typeFruit; } }
 
     private void Awake()
     {

@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: -7240314530864406961}
   m_Layer: 6
   m_Name: Cherries
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -7,6 +7,12 @@ TagManager:
   - Wall
   - Apple
   - Break
+  - Box
+  - Fire
+  - Fruit
+  - FallingPlatform
+  - Blocks
+  - HeadBlock
   layers:
   - Default
   - TransparentFX
@@ -17,7 +23,7 @@ TagManager:
   - Fruit
   - Player
   - HeadRock
-  - 
+  - Box
   - 
   - 
   - 

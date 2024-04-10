@@ -93,22 +93,12 @@ public class Box : MonoBehaviour
         // Retorna -1 se algo der errado
         return null;
     }
-    private void OnCollisionEnter2D(Collision2D collision2D)
+
+    public void Hit(PlayerController player, float dir)
     {
-        if (collision2D.gameObject.tag == "Player")
-        {
-            if (collision2D.transform.position.y - 0.8f > transform.position.y && collision2D.gameObject.GetComponent<PlayerController>()._isJumpig)
-            {
-                anim.SetTrigger("Hit");
-                collision2D.gameObject.GetComponent<PlayerController>().Jumping(250f, Vector2.up);
-                life--;
-            }
-            else if (collision2D.transform.position.y < transform.position.y)
-            {
-                anim.SetTrigger("Hit");
-                collision2D.gameObject.GetComponent<PlayerController>().Jumping(50f, Vector2.down);
-                life--;
-            }
-        }
+        anim.SetTrigger("Hit");
+        player.Jumping(150f * dir, Vector2.up);
+        life--;
     }
+    
 }

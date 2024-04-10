@@ -14,12 +14,9 @@ public class Fire : MonoBehaviour
             StartCoroutine(Enable());
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    public void FireHit(GameObject other)
     {
-        if (other.tag == "Player")
-        {
-            Vector2 dir = Vector2.zero;
+        Vector2 dir = Vector2.zero;
             if(transform.position.x > other.transform.position.x)
                 dir.x = -0.5f;
             else if(transform.position.x < other.transform.position.x)
@@ -33,8 +30,8 @@ public class Fire : MonoBehaviour
                 dir.y = 1f;
 
             other.gameObject.GetComponent<PlayerController>().Hit(200, dir);
-        }
     }
+
 
     IEnumerator Enable()
     {
