@@ -13,6 +13,10 @@ TagManager:
   - FallingPlatform
   - Blocks
   - HeadBlock
+  - Sand
+  - Mud
+  - Ice
+  - Platform
   layers:
   - Default
   - TransparentFX

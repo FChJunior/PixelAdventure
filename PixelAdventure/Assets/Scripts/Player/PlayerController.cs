@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     public bool _enabledMove { set { enabledMove = value; } } // Possibilita que outros scripts consigam habilitar ou desabilitar o movimento do Player.
     public bool _enabledJump { set { enabledJump = value; } } // Possibilita que outros scripts consigam habilitar ou desabilitar o pulo do Player.
     public bool _enabledDoubleJump { set { enabledDoubleJump = value; } } // Possibilita que outros scripts consigam habilitar ou duplo pulo o movimento do Player.
-    public bool _enabledDash { set { enabledMove = value; } } // Possibilita que outros scripts consigam habilitar ou desabilitar o dash do Player.
+    public bool _enabledDash { set { enabledDash = value; } } // Possibilita que outros scripts consigam habilitar ou desabilitar o dash do Player.
     public bool _enabledWallSlide { set { enabledWallSlide = value; } } // Possibilita que outros scripts consigam habilitar ou wall slide o movimento do Player.
     //=============================================================================//
     #endregion
@@ -48,12 +48,14 @@ public class PlayerController : MonoBehaviour
     //=============================================================================//
     [Header("Atribrutos de Colisão com o Chão")]
     [SerializeField] private bool inGround; // Verifica se o Player está no chão.
+    [SerializeField] private bool inIce; // Verifica se o Player está no chão.
     [SerializeField] private bool isFalling; // Verifica se o Player está caindo.
     [SerializeField] private bool isRising; // Verifica se o Player está subindo.
     //=============================================================================//
     //============== Atributos GETERS e SETERS de Colisão com o Chão. =============//
     //=============================================================================//
     public bool _inGround { get { return inGround; } set { inGround = value; } } // Possibilita que outros scripts consigam acessar e modificar se o player está se no chão.
+    public bool _inIce { get { return inIce; } set { inIce = value; } }
     public bool _isFalling { get { return isFalling; } set { isFalling = value; } } //Possibilita que outros scripts consigam acessar se o player está caindo.
     public bool _isRising { get { return isRising; } set { isRising = value; } } //Possibilita que outros scripts consigam acessar se o player está subindo.
     //=============================================================================//
@@ -71,6 +73,7 @@ public class PlayerController : MonoBehaviour
     //============ Atributos GETERS e SETERS de movimentação do Player. ===========//
     //=============================================================================//
     public bool _isMoving { get { return isMoving; } } // Possibilita que outros scripts consigam acessar se o player está se movendo.
+    public float _speed { get { return speed; } set { speed = value; } }
     //=============================================================================//
     #endregion
 
@@ -113,7 +116,7 @@ public class PlayerController : MonoBehaviour
     //=============================================================================//
     //=============== Atributos de Controle de Dash do Player. ==============//
     //=============================================================================//
-    [Header("Player Wall Slide")]
+    [Header("Player Dash Slide")]
     [SerializeField] private bool inputDash; // Recebe o input do jogador pra poder usar o Dash.
     [SerializeField] private bool inDash; // Verifica se o Player está em Dash;
     [SerializeField] private bool canDash; // Verifica se o Player pode usar o Dash;
@@ -124,7 +127,9 @@ public class PlayerController : MonoBehaviour
     //============= Atributos GETERS e SETERS de Dash do Player. ============//
     //=============================================================================//
     public bool _inDash { get { return inDash; } } // Possibilita que outros Scripts possam acessar se o Player está usando o Dash.
-                                                   //=============================================================================//
+    public float _dashForce { get { return dashForce; } set { dashForce = value; } }
+    
+    //=============================================================================//
     #endregion
 
     #region Métodos de Inicialização
@@ -157,7 +162,8 @@ public class PlayerController : MonoBehaviour
     }
     private void Inputs()
     {
-        inputMove.x = playerInputs.Movement() * speed; // Recebe o valor de input de movimento horizontal do jogador e multiplica pela velociadade para dar movimento ao player.
+        if (!inIce) { inputMove.x = playerInputs.Movement() * speed; }
+        else { inputMove.x = playerInputs.MovementIce() * speed/3f; }// Recebe o valor de input de movimento horizontal do jogador e multiplica pela velociadade para dar movimento ao player.
         inputMove.y = player.velocity.y; // Recebe o valor da propria velociadade de Y do player para não interferir na gravidae do jogo.
 
         if (playerInputs.Jump() && enabledJump) inputJump = true; // Chama o pulo do Player.
@@ -195,8 +201,10 @@ public class PlayerController : MonoBehaviour
     //=========================================================================//
     private void Movement()
     {
-        player.velocity = inputMove; // Atuliza a velocidade do Player via Rigidbody.
-        isMoving = player.velocity.x != 0; // Atuliza a varivel se player está se movendo.
+        if(!inIce)player.velocity = inputMove; // Atuliza a velocidade do Player via Rigidbody.
+        else player.AddForce(inputMove, ForceMode2D.Impulse);
+        
+        isMoving = player.velocity.x != 0 && inputMove.x != 0; // Atuliza a varivel se player está se movendo.
         if (!inWall && !hit) Flip(); // Chama o método para flipar o player no eixo Y caso necessario.
 
     }

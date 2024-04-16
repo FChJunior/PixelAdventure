@@ -6,14 +6,12 @@ public class PlayerCollision : MonoBehaviour
     [Header("Player Collision")]
     [SerializeField] private PlayerController player;
     [SerializeField] private Transform parent;
+    [SerializeField] private float speed, dashForce;
 
-    private void OnCollisionEnter2D(Collision2D other)
+    void Start()
     {
-
-    }
-    private void OnCollisionExit2D(Collision2D other)
-    {
-
+        speed = player._speed;
+        dashForce = player._dashForce;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,6 +49,25 @@ public class PlayerCollision : MonoBehaviour
             player._nJump = 0;
             transform.SetParent(other.transform);
         }
+        if (other.gameObject.tag == "Sand")
+        {
+            player._speed = 2.5f;
+            player._dashForce = 5;
+        }
+        if (other.gameObject.tag == "Ice")
+        {
+            player._inIce = true;
+        }
+        if (other.gameObject.tag == "Mud")
+        {
+            player._speed = 0;
+            player._enabledDash = false;
+        }
+        if (other.tag == "Platform")
+        {
+            transform.SetParent(other.GetComponent<Platform>()._follow);
+            if (other.GetComponent<Platform>()._typePlatform == 1) other.GetComponent<Platform>()._right = !other.GetComponent<Platform>()._right;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -58,6 +75,25 @@ public class PlayerCollision : MonoBehaviour
         if (other.tag == "HeadBlock")
         {
             transform.SetParent(parent);
+        }
+        if (other.gameObject.tag == "Sand")
+        {
+            player._speed = speed;
+            player._dashForce = dashForce;
+        }
+        if (other.gameObject.tag == "Ice")
+        {
+            player._inIce = false;
+        }
+        if (other.gameObject.tag == "Mud")
+        {
+            player._speed = speed;
+            player._enabledDash = true;
+        }
+        if (other.tag == "Platform")
+        {
+            transform.SetParent(parent);
+            if (other.GetComponent<Platform>()._typePlatform == 1) other.GetComponent<Platform>()._right = !other.GetComponent<Platform>()._right;
         }
     }
 }

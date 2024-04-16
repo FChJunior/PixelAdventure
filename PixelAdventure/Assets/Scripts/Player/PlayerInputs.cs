@@ -7,6 +7,11 @@ public class PlayerInputs : MonoBehaviour
         float movement = Input.GetAxisRaw("Horizontal");
         return movement;
     }
+    public float MovementIce()
+    {
+        float movement = Input.GetAxis("Horizontal");
+        return movement;
+    }
     public bool Jump()
     {
         bool jump = Input.GetButtonDown("Jump");
